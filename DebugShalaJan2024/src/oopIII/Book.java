@@ -2,24 +2,18 @@ package oopIII;
 
 public class Book {
 	
-	int bookid;//instance data member , primitive dm
-	String title;//refrence variable
-	Publisher publisher;//refrence variable 
+	private int bookid;//instance data member , primitive dm
+	private String title;//refrence variable
+	private Publisher publisher;//refrence variable 
 	
 	
 	public Book() {
+//		this.bookid=0;
+//		this.title="not assigned";
+//		this.publisher=new Publisher();
 		
 	}
-
-
-	public Book(int bookid, String title, Publisher publisher) {
-		super();
-		this.bookid = bookid;
-		this.title = title;
-		this.publisher = publisher;
-	}
-
-	//
+	//para cons
 	public Book(int bookid, String title,int pubid , String pub_name , String pub_loc) {
 		
 		this.bookid = bookid;
@@ -32,8 +26,23 @@ public class Book {
 	{
 		System.out.println("Book id: "+bookid);
 		System.out.println("Book Title: "+title);
-		publisher.display();
+		if(publisher == null)
+		{
+			System.out.println("Not Assigned anything in publisher");
+		}
+		else
+		{
+			publisher.display();
+		}
 	}
 	
+	public int getBookid() {
+		return bookid;
+	}
+	public void setBookid(int bookid) {
+		this.bookid = bookid;
+	}
+	
+
 	
 }

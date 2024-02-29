@@ -9,6 +9,7 @@ public class Publisher {
 	//default cons
 	public Publisher() {
 		
+		
 	}
 
 	//para cons
@@ -34,10 +35,5 @@ public class Publisher {
 		this.pubid = pubid;
 		System.out.println("Updated pubid : "+pubid);
 	}
-	
-	
-	
-	
-	
-	
+		
 }
